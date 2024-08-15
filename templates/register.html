@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="register-container">
+  <h2>S'inscrire</h2>
+  <form action="/auth" method="post">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">adresse email :</label>
+    <input type="text" id="email" name="email" required>
+    <br><br>
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm_password">Confirmer le mot de passe</label>
+    <input type="password" id="confirm_password" name="confirm_password">
+
+    <br><br>
+    <button type="submit">Connexion</button>
+  </form>
+</div>
+</body>
+</html>
