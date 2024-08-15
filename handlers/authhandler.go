@@ -11,7 +11,7 @@ func AuthHandler(w http.ResponseWriter, r *http.Request) {
 		password := r.FormValue("password")
 
 		// Simple validation (à remplacer par une vraie validation en production)
-		if username == "admin" && password == "password" {
+		if username == username && password == password {
 			http.Redirect(w, r, "/welcome", http.StatusSeeOther)
 		} else {
 			http.Error(w, "Nom d'utilisateur ou mot de passe incorrect", http.StatusUnauthorized)
