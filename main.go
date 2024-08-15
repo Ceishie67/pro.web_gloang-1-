@@ -20,7 +20,7 @@ func main() {
 
 	// Redirect root URL to /login
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/login", http.StatusFound)
+		http.Redirect(w, r, "/register", http.StatusFound)
 	})
 
 	// Démarre le serveur sur le port 8080

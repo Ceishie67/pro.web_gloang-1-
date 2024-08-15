@@ -6,7 +6,7 @@ import (
 )
 
 func RegisterHandler(w http.ResponseWriter, r *http.Request) {
-	tmpl, err := template.ParseFiles("register.html")
+	tmpl, err := template.ParseFiles("templates/register.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
