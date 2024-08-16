@@ -15,12 +15,14 @@ func main() {
 	// Route pour afficher la page de register
 	http.HandleFunc("/register", handlers.RegisterHandler)
 
+	http.HandleFunc("/home", handlers.HomeHandler)
+
 	// Sert les fichiers statiques (CSS, images, etc.)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
 	// Redirect root URL to /login
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/register", http.StatusFound)
+		http.Redirect(w, r, "/login", http.StatusFound)
 	})
 
 	// Démarre le serveur sur le port 8080
